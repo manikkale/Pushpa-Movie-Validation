@@ -27,10 +27,11 @@ public class Page2 {
     	wiki.click();
     	
     }
-    public void searchName() {
+    public void searchName(String movieName) {
     	
     	search.click();
-    	search.sendKeys("Pushpa: The Rise");
+    	search.sendKeys(movieName);
+    	
     	
     }
     public void clickOnSearchbtn() {

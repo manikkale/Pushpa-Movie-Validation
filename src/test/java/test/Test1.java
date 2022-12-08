@@ -29,6 +29,7 @@ public class Test1 extends Base{
 	 String imdborgCountry;
 	 String wikiDate;
 	 String wikiorgCountry;
+	 String movieName="Pushpa: The Rise";
 	
 	@BeforeTest
 	public void createReport() {
@@ -62,7 +63,7 @@ public class Test1 extends Base{
 		tests=extent.createTest("extractDataIMDB");
 		test1=new Page1(driver);
 		test1.googleSearch();
-		test1.searchName();
+		test1.searchName(movieName);
 		test1.clickOnSearchbtn();
 		test1.clickOnName();
 		test1.scroll(driver);
@@ -74,7 +75,7 @@ public class Test1 extends Base{
 		tests=extent.createTest("extractDataWIKI");
 		 test=new Page2(driver);
 		test.googleSearch();
-		test.searchName();
+		test.searchName(movieName);
 		test.clickOnSearchbtn();
 		wikiDate=test.extractDate();
 		wikiorgCountry=test.extractCountry();
